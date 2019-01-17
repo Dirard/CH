@@ -10,6 +10,11 @@ $dark_theme-bg_color--lvl3: #8f8f8f;
     src: font-url("OpenSans-ExtraBold.ttf");
 }
 
+@font-face {
+    font-family: "Modern";
+    src: font-url("Moderne Fette Schwabacher.ttf");
+}
+
 body {
     
     background-color: $dark_theme-bg_color--lvl2;
@@ -24,6 +29,7 @@ body {
 * {
     outline: none;
 }
+
 
 @mixin big_bordered_text {
     font-family: 'Supra';
