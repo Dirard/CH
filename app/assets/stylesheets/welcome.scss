@@ -1,0 +1,292 @@
+// Place all the styles related to the Welcome controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+$dark_theme-bg_color--lvl1: #212121;
+$dark_theme-bg_color--lvl2: #303030;
+$dark_theme-bg_color--lvl3: #8f8f8f;
+
+@font-face {
+    font-family: "Supra";
+    src: font-url("OpenSans-ExtraBold.ttf");
+}
+
+body {
+    
+    background-color: $dark_theme-bg_color--lvl2;
+    height: 100vh;
+    margin:0;
+    max-width: 2000px;
+    font-size: 1.5rem;
+    font-family: sans-serif;
+    
+}
+
+* {
+    outline: none;
+}
+
+@mixin big_bordered_text {
+    font-family: 'Supra';
+    font-size: 2rem !important;
+    word-spacing: 0.2rem;
+    font-weight: 900;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: unset;
+    text-transform: none;
+    color: #ffffff !important;
+    text-shadow:0px 1px 0 rgba(0,0,0, 0.6),0px -1px 0 rgba(0,0,0, 0.6),1px 0px 0 rgba(0,0,0, 0.6),-1px 0px 0 rgba(0,0,0, 0.6),1px 1px 0 rgba(0,0,0, 0.6),1px -1px 0 rgba(0,0,0, 0.6),-1px 1px 0 rgba(0,0,0, 0.6),-1px -1px 0 rgba(0,0,0, 0.6);
+    -webkit-text-shadow:0px 1px 0 rgba(0,0,0, 0.6),0px -1px 0 rgba(0,0,0, 0.6),1px 0px 0 rgba(0,0,0, 0.6),-1px 0px 0 rgba(0,0,0, 0.6),1px 1px 0 rgba(0,0,0, 0.6),1px -1px 0 rgba(0,0,0, 0.6),-1px 1px 0 rgba(0,0,0, 0.6),-1px -1px 0 rgba(0,0,0, 0.6);
+    -moz-text-shadow:0px 1px 0 rgba(0,0,0, 0.6),0px -1px 0 rgba(0,0,0, 0.6),1px 0px 0 rgba(0,0,0, 0.6),-1px 0px 0 rgba(0,0,0, 0.6),1px 1px 0 rgba(0,0,0, 0.6),1px -1px 0 rgba(0,0,0, 0.6),-1px 1px 0 rgba(0,0,0, 0.6),-1px -1px 0 rgba(0,0,0, 0.6);
+}
+@mixin big_black_text {
+    font-family: 'Supra';
+    font-size: 2rem !important;
+    word-spacing: 0.2rem;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    color: rgb(0,0,0) !important;
+    text-shadow: none;
+}
+
+@mixin time_text {
+    font-family: 'Supra';
+    font-size: 2rem !important;
+    letter-spacing: 1.7px;
+    word-spacing: 2.2px;
+    font-weight: 900;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: unset;
+    text-transform: none;
+    color: #86d4f8 !important;
+    text-shadow:0px 1px 0 rgb(45, 71, 156),0px -1px 0 rgb(45, 71, 156),1px 0px 0 rgb(45, 71, 156),-1px 0px 0 rgb(45, 71, 156),1px 1px 0 rgb(45, 71, 156),1px -1px 0 rgb(45, 71, 156),-1px 1px 0 rgb(45, 71, 156),-1px -1px 0 rgb(45, 71, 156);
+    -webkit-text-shadow:0px 1px 0 rgb(45, 71, 156),0px -1px 0 rgb(45, 71, 156),1px 0px 0 rgb(45, 71, 156),-1px 0px 0 rgb(45, 71, 156),1px 1px 0 rgb(45, 71, 156),1px -1px 0 rgb(45, 71, 156),-1px 1px 0 rgb(45, 71, 156),-1px -1px 0 rgb(45, 71, 156);
+    -moz-text-shadow:0px 1px 0 rgb(45, 71, 156),0px -1px 0 rgb(45, 71, 156),1px 0px 0 rgb(45, 71, 156),-1px 0px 0 rgb(45, 71, 156),1px 1px 0 rgb(45, 71, 156),1px -1px 0 rgb(45, 71, 156),-1px 1px 0 rgb(45, 71, 156),-1px -1px 0 rgb(45, 71, 156);
+}
+
+.navbar {
+    background-color: $dark_theme-bg_color--lvl1;
+    color: #df8634;
+}
+.navbar-collapse {
+    -webkit-transition: 0.2s ease;
+    transition: 0.2s ease;
+}
+.card, .content {
+    background-color: $dark_theme-bg_color--lvl3;
+}
+.avatar {
+    background: url("avatar.png") 50% 43% no-repeat;
+    background-size: cover;
+}
+h3 {
+    font-variant: small-caps;
+    
+}
+.sign-in, .sign-up {
+    -ms-flex-item-align: center;
+    align-self: center;
+    width: 60%;
+    height: 30%;
+    .card-header, .card-footer {
+        height: 20%;
+        font-size: 3rem;
+    }
+    input {
+        height: 70px;
+        font-size: 2rem;
+    }
+    button {
+        height: 50px;
+        font-size: 1rem;
+    }
+    
+}
+.welcome-div {
+    position: absolute;
+    margin-top: 15vh;
+    .content {
+        min-height: 80%;
+        .header {
+            height:15%;
+        }
+        .content-info {
+            height: 85%;
+        }
+    }
+    .md-form label {
+        top: 0;
+    }
+}
+.nav-tabs {
+    background-color: #df8734be;
+    border-bottom: none;
+
+    .nav-item {
+        
+        &:hover {
+            border: none !important;
+        }
+        .nav-link {
+            border: none;
+        }
+        .active {
+            background-color: rgba(255, 255, 255, 0);
+        }
+        a {
+            color: rgb(0, 0, 0);
+            &.active {
+                color: rgba(240, 240, 240, 0.705);
+            }
+        }
+
+    }
+    
+}
+.change_tz {
+    font-family: Verdana, Geneva, sans-serif;
+    font-size: 25px;
+    letter-spacing: 1.4px;
+    word-spacing: 2.2px;
+    color: #383838 !important;
+    font-weight: 700;
+    text-decoration: none;
+    font-style: normal;
+    font-variant: small-caps;
+    text-transform: none;
+    background-color: #cfcfcf;
+}
+.selected_tab_indicator {
+    position: absolute;
+    height: 3px;
+    width: 50px;
+    background-color: #000000;
+    margin-top: -3px;
+    transition: 0.2s ease;
+    -moz-transition: 0.2s ease;
+    -webkit-transition: 0.2s ease;
+}
+.modal-dialog {
+    width: 80vw;
+    max-width: 80vw;
+    .modal-content {
+        background-color: #cfcfcf;
+    }
+}
+.dropdown-toggle {
+    height: 5rem;
+    width: 100%;
+}
+.dropdown span.text, .filter-option-inner-inner {
+    font-size: 2.5rem;
+}
+.tab-pane {
+    min-height: 60vh;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+.class_icon {
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.table, {
+    background-color: #afafaf;
+
+    td { 
+        @include big_bordered_text;
+    }
+    th, .info-text {
+        @include big_black_text;
+    }
+    .items_row_content {
+        height: 3rem;
+        position: relative;
+        span {
+            position: relative;
+            z-index: 100;
+        }
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            left: 0; right: 0;
+            bottom: 100%;
+            border-bottom: 1.5rem solid rgba(40, 84, 141, 0.774);
+            border-left: 1.5rem solid transparent;
+            border-right: 1.5rem solid transparent;
+        }
+        &:before {
+            top: 0;
+            border-top: none;
+            border-bottom: 1.5rem solid rgba(40, 84, 141, 0.774);
+        }
+        &:after {
+            bottom: 0;
+            border-bottom: none;
+            border-top: 1.5rem solid rgba(40, 84, 141, 0.774);
+        }
+    }
+}
+
+.table > tbody > tr > td {
+    vertical-align: middle;
+}
+
+.item_number {
+    @include big_bordered_text; 
+}
+#training .header {
+    @include big_bordered_text; 
+}
+.time {
+    @include time_text;
+}
+@media screen and (max-width: 980px) {
+    body {
+        font-size: 2rem;
+    }
+    .logo {
+        height: 100px;
+    }
+    .card_icon {
+        height: 30px;
+        width: 30px;
+    }
+    .class_icon {
+        height: 80px;
+        width: 80px;
+        &.active {
+            transform: translate(-10px, -10px);
+            height: 100px;
+            width: 100px;
+        }
+    }
+}
+
+@media screen and (min-width: 981px) and (max-width: 1200px) {
+    body {
+        font-size: 1.2rem;
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    .logo {
+        height: 100px;
+    }
+}
+
+@media screen and (min-width: 12001px){
+    body {
+        font-size: 1.2rem;
+        h1 {
+            font-size: 2rem;
+        }
+    }
+    .logo {
+        height: 100px;
+    }
+}

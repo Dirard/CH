@@ -1,0 +1,5 @@
+class TelegramController < ApplicationController
+
+    
+
+end

@@ -1,0 +1,716 @@
+<div class="welcome-div text-center container-fluid">
+
+    <a class="btn waves-effect waves-dark text-center change_tz w-75 my-4" data-toggle="modal" data-target="#exampleModalCenter"><i class="fa fa-lg fa-pencil"></i> <span class="current_tz">Тронный зал:</span></a>
+              
+    <a class="carousel-control carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+    <div class="content z-depth-1  mb-4">
+        <div id="carouselExampleControls" class="carousel slide" data-ride="carousel" data-interval="false">
+            <div class="content-info">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <ul class="nav nav-tabs z-depth-1 d-flex justify-content-center" id="myTab1" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active show" id="home-tab" data-toggle="tab" href="#leage" role="tab" aria-controls="leage" aria-selected="true">Лиги</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="profile-tab" data-toggle="tab" href="#market" role="tab" aria-controls="market" aria-selected="false">Магазин</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#arena" role="tab" aria-controls="arena" aria-selected="false">Арена</a>
+                            </li>
+                        </ul>
+                        <div id="selected_tab_indicator" class="selected_tab_indicator"></div>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="leage" role="tabpanel" aria-labelledby="home-tab">1</div>
+                            <div class="tab-pane fade" id="market" role="tabpanel" aria-labelledby="profile-tab"></div>
+                            <div class="tab-pane fade" id="arena" role="tabpanel" aria-labelledby="contact-tab">3</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <ul class="nav nav-tabs z-depth-1 d-flex justify-content-center" id="myTab2" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active show" id="contact-tab" data-toggle="tab" href="#portal" role="tab" aria-controls="portal" aria-selected="false">Портал</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#map" role="tab" aria-controls="map" aria-selected="false">Карта</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#cw" role="tab" aria-controls="cw" aria-selected="false">КВ</a>
+                            </li>
+                        </ul>
+                        <div class="selected_tab_indicator"></div>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="portal" role="tabpanel" aria-labelledby="profile-tab">4</div>
+                            <div class="tab-pane fade" id="map" role="tabpanel" aria-labelledby="profile-tab">5</div>
+                            <div class="tab-pane fade" id="cw" role="tabpanel" aria-labelledby="profile-tab">6</div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <ul class="nav nav-tabs z-depth-1 d-flex justify-content-center" id="myTab3" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active show" id="contact-tab" data-toggle="tab" href="#craft" role="tab" aria-controls="craft" aria-selected="false">Мастерские</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="contact-tab" data-toggle="tab" href="#training" role="tab" aria-controls="training" aria-selected="false">Тренировка</a>
+                            </li>
+                        </ul>
+                        <div class="selected_tab_indicator"></div>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="craft" role="tabpanel" aria-labelledby="profile-tab">7</div>
+                            <div class="tab-pane fade" id="training" role="tabpanel" aria-labelledby="profile-tab">
+                                <div class="header mt-2">Выберите класс</div>
+                                <div class="card-body row class_panel d-felx justify-content-center px-0">
+                                    
+                                    <div class="col-sm-2 col-md-2 col-lg-2 training_class"><%= image_tag("alchemist.png", :class => "class_icon mb-2", :id => "alchemist")  %></div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2 training_class"><%= image_tag("carpenter.png", :class => "class_icon mb-2", :id => "carpenter")  %></div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2 training_class"><%= image_tag("cook.png", :class => "class_icon mb-2", :id => "cook")  %></div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2 training_class"><%= image_tag("treasurer.png", :class => "class_icon mb-2", :id => "treasurer")  %></div>
+                                    <div class="col-sm-2 col-md-2 col-lg-2 training_class"><%= image_tag("fighter.png", :class => "class_icon mb-2", :id => "fighter")  %></div>
+                                </div>
+                                <div class="training-content"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
+
+
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+
+    <!-- Add .modal-dialog-centered to .modal-dialog to vertically center the modal -->
+    <div class="modal-dialog modal-dialog-centered" role="document">
+
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title" id="exampleModalLongTitle">Выберите уровень тронного зала</h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body text-center">
+                <select class="selectpicker large-select" id="chosen_tz"><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7</option><option>8</option><option>9</option><option>10</option></select>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-danger waves-effect waves-light" data-dismiss="modal"><h3 class="mb-0">Отмена</h3></button>
+                <button type="button" class="btn btn-dark-green waves-effect waves-light" id="choose_tz"><h3 class="mb-0">Сохранить</h3></button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    let dataset = {
+        market: {
+            "Тронный зал 2": [
+                {
+                    name: "heroic_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "basic_items",
+                                number: "3"
+                            }
+                        ],
+                        possible: [
+
+                        ]
+                    },
+                    cost: {
+                        value: "50",
+                        type: "diamonds"
+                    }
+                }
+            ],
+            "Тронный зал 3": [
+                {
+                    name: "heroic_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "basic_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "rare_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+
+                        ]
+                    },
+                    cost: {
+                        value: "50",
+                        type: "diamonds"
+                    }
+                }
+            ],
+            "Тронный зал 4": [
+                {
+                    name: "heroic_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "basic_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "rare_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+
+                        ]
+                    },
+                    cost: {
+                        value: "75",
+                        type: "diamonds"
+                    }
+                }
+            ],
+            "Тронный зал 5": [
+                {
+                    name: "heroic_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "basic_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "rare_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+                            {
+                                item: "epic_items",
+                                number: ""
+                            }
+                        ]
+                    },
+                    cost: {
+                        value: "90",
+                        type: "diamonds"
+                    }
+                },
+                {
+                    name: "mythical_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "rare_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "epic_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+
+                        ]
+                    },
+                    cost: {
+                        value: "250",
+                        type: "diamonds"
+                    }
+                }
+            ],
+            "Тронный зал 6": [
+                {
+                    name: "heroic_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "basic_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "rare_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+                            {
+                                item: "epic_items",
+                                number: ""
+                            },
+                            {
+                                item: "legendary_items",
+                                number: ""
+                            }
+                        ]
+                    },
+                    cost: {
+                        value: "150",
+                        type: "diamonds"
+                    }
+                },
+                {
+                    name: "mythical_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "rare_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "epic_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+                            {
+                                item: "legendary_items",
+                                number: ""
+                            }
+                        ]
+                    },
+                    cost: {
+                        value: "350",
+                        type: "diamonds"
+                    }
+                }
+            ],
+            "Тронный зал 7": [
+                {
+                    name: "heroic_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "basic_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "rare_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+                            {
+                                item: "epic_items",
+                                number: ""
+                            },
+                            {
+                                item: "legendary_items",
+                                number: ""
+                            }
+                        ]
+                    },
+                    cost: {
+                        value: "150",
+                        type: "diamonds"
+                    }
+                },
+                {
+                    name: "mythical_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "rare_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "epic_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+                            {
+                                item: "legendary_items",
+                                number: ""
+                            }
+                        ]
+                    },
+                    cost: {
+                        value: "350",
+                        type: "diamonds"
+                    }
+                }
+            ],
+            "Тронный зал 8": [
+                {
+                    name: "heroic_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "basic_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "rare_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+                            {
+                                item: "epic_items",
+                                number: ""
+                            },
+                            {
+                                item: "legendary_items",
+                                number: ""
+                            }
+                        ]
+                    },
+                    cost: {
+                        value: "350",
+                        type: "diamonds"
+                    }
+                },
+                {
+                    name: "mythical_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "rare_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "epic_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+                            {
+                                item: "legendary_items",
+                                number: ""
+                            }
+                        ]
+                    },
+                    cost: {
+                        value: "750",
+                        type: "diamonds"
+                    }
+                }
+            ],
+            "Тронный зал 9": [
+                {
+                    name: "heroic_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "basic_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "rare_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+                            {
+                                item: "epic_items",
+                                number: ""
+                            },
+                            {
+                                item: "legendary_items",
+                                number: ""
+                            }
+                        ]
+                    },
+                    cost: {
+                        value: "500",
+                        type: "diamonds"
+                    }
+                },
+                {
+                    name: "mythical_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "rare_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "epic_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+                            {
+                                item: "legendary_items",
+                                number: ""
+                            }
+                        ]
+                    },
+                    cost: {
+                        value: "950",
+                        type: "diamonds"
+                    }
+                }
+            ],
+            "Тронный зал 10": [
+            {
+                    name: "heroic_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "basic_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "rare_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+                            {
+                                item: "epic_items",
+                                number: ""
+                            },
+                            {
+                                item: "legendary_items",
+                                number: ""
+                            }
+                        ]
+                    },
+                    cost: {
+                        value: "900",
+                        type: "diamonds"
+                    }
+                },
+                {
+                    name: "mythical_chest",
+                    drop: {
+                        necessarily: [
+                            {
+                                item: "rare_items",
+                                number: "2-3"
+                            },
+                            {
+                                item: "epic_items",
+                                number: "1-2"
+                            }
+                        ],
+                        possible: [
+                            {
+                                item: "legendary_items",
+                                number: ""
+                            }
+                        ]
+                    },
+                    cost: {
+                        value: "1450",
+                        type: "diamonds"
+                    }
+                }
+            ]
+        },
+        training: {
+            alchemist: {
+
+            },
+            carpenter: {
+
+            },
+            cook: {
+
+            },
+            treasurer: {
+
+            },
+            fighter: [
+                {
+                    min: 1,
+                    max: 8,
+                    total_time: "14м",
+                    total_speed_up: {
+                        type: "diamonds",
+                        value: 14
+                    }
+                },
+                {
+                    min: 8,
+                    max: 14,
+                    total_time: "1ч",
+                    total_speed_up: {
+                        type: "diamonds",
+                        value: 18
+                    }
+                },
+                {
+                    min: 14,
+                    max: 20,
+                    total_time: "4ч 30м",
+                    total_speed_up: {
+                        type: "diamonds",
+                        value: 51
+                    }
+                },
+                {
+                    min: 20,
+                    max: 30,
+                    total_time: "1д 1ч",
+                    total_speed_up: {
+                        type: "diamonds",
+                        value: 260
+                    }
+                },
+                {
+                    min: 30,
+                    max: 40,
+                    total_time: "1д 21ч",
+                    total_speed_up: {
+                        type: "diamonds",
+                        value: 455
+                    }
+                },
+                {
+                    min: 40,
+                    max: 55,
+                    total_time: "4д 9ч",
+                    total_speed_up: {
+                        type: "diamonds",
+                        value: 1095
+                    }
+                },
+                {
+                    min: 55,
+                    max: 70,
+                    total_time: "6д 11ч",
+                    total_speed_up: {
+                        type: "diamonds",
+                        value: 1645
+                    }
+                },
+                {
+                    min: 70,
+                    max: 85,
+                    total_time: "22д 12ч",
+                    total_speed_up: {
+                        type: "diamonds",
+                        value: 4725
+                    }
+                },
+                {
+                    min: 85,
+                    max: 100,
+                    total_time: "63д 17ч",
+                    total_speed_up: {
+                        type: "diamonds",
+                        value: 9921
+                    }
+                }
+            ]
+        }
+    }
+
+    function create_wiki_card(object) {
+        let dropdown_options = Object.values(object)
+        let tables = "";
+        for (let index in dropdown_options) {
+            let current_data = dropdown_options[index];
+            let table = $("<table class='table table-sm table-borderless mt-4 text-center z-depth-1' />")
+            let tbody = $("<tbody />")
+            let num_of_items = (current_data.drop["necessarily"].length + 1)
+            num_of_items += (current_data.drop["possible"].length > 0) ? (current_data.drop["possible"].length + 1) : (0)
+            let tr = $("<tr />")
+            tr.append("<td class='align-middle' rowspan="+num_of_items+">"+get_image_by_type(current_data.name)+"<br><br><span class='item_number'>"+get_image_by_type(current_data.cost.type)+" "+current_data.cost.value+"</span></td><td class='info-text pb-0'>Содержит:</td>")
+            tbody
+                .append(tr)
+            for (let necessarily_index in current_data.drop.necessarily) {
+                tbody
+                    .append($("<tr><td class='pt-0'><div class='items_row_content'><span>"+current_data.drop.necessarily[necessarily_index].number+" "+current_data.drop.necessarily[necessarily_index].item+"</span></div></td></tr>"))
+            }
+            
+            for (let possible_index in current_data.drop.possible) {
+                if (possible_index == 0) {
+                    tbody.append("<tr><td class='info-text pb-0'>Можно найти:</td></tr>")
+                }
+                tbody
+                    .append($("<tr><td class='pt-0'><div class='items_row_content'><span>"+current_data.drop.possible[possible_index].number+" "+current_data.drop.possible[possible_index].item+"</span></div></td></tr>"))
+            }
+            
+            table  
+                .append(tbody)
+            tables += table.prop("outerHTML")
+        }
+        return tables
+    }
+    
+    function training_class(class_data) {
+        let table = $("<table class='table table-sm mt-4 text-center z-depth-1' />")
+        let thead = $("<thead><th>Уровни</th><th>Время тренировки</th><th>Стоимость тренировки</th>")
+        let tbody = $("<tbody />")
+        
+        for (let index in class_data) {
+            tbody
+                .append("<tr><td><span class='item_number d-flex align-items-center justify-content-center'>"+class_data[index]["min"]+" <i class='fa fa-sm fa-arrow-right align-self-middle mx-2' style='font-size:1rem;'></i> "+class_data[index]["max"]+"</span></td><td class='text-left'><span class='time' style='margin-left:30%'>"+class_data[index]["total_time"]+"</span></td><td class='text-left'><span class='item_number' style='margin-left:30%'>"+get_image_by_type(class_data[index]["total_speed_up"]["type"])+" "+class_data[index]["total_speed_up"]["value"]+"</span></td></tr>")
+        }
+        table
+            .append(thead)
+            .append(tbody)
+        return table
+    }
+
+    function get_image_by_type(type) {
+        switch (type) {
+            case "diamonds":
+                return '<%= image_tag("diamonds.png", :class => "card_icon mb-2")  %>'
+                break
+            case "mythical_chest":
+                return '<%= image_tag("chest1.png", :class => "big_card_icon mb-2")  %>'
+                break
+        }
+    }
+    
+    $("#choose_tz").click(function() {
+        $(".current_tz").text("Тронный зал: "+$("#chosen_tz").val())
+        $("#exampleModalCenter").modal("hide")
+        $("#market").empty()
+        $("#market").append(create_wiki_card(dataset["market"]["Тронный зал "+$("#chosen_tz").val()]))
+    })
+
+    $(".training_class").click(function() {
+        $(".training_class img.active").removeClass("active")
+        $(this).find("img").addClass("active")
+        $(".training-content").empty()
+        $(".training-content").append(training_class(dataset.training[$(this).children()[0].getAttribute("id")]))
+    })
+
+    $(function() {
+        
+        let selected_tab_indicator = $("#selected_tab_indicator");
+        var active = $(".carousel-item.active .nav-link.active")
+        var top = selected_tab_indicator.offset().top
+        selected_tab_indicator.offset({top: top,left: active.offset().left})
+        selected_tab_indicator.width(active.outerWidth())
+        $(".nav-tabs").click(function() {
+            let that = this;
+            setTimeout(function() {
+                let selected_tab_indicator = $(that).parent().find(".selected_tab_indicator")
+                let active = $(that).parent().find(".nav-link.active")
+                let top = selected_tab_indicator.offset().top
+                selected_tab_indicator.offset({top: top,left: active.offset().left})
+                selected_tab_indicator.width(active.outerWidth())
+            }, 50)
+        } )
+
+        $("#carouselExampleControls").on("slid.bs.carousel", function() {
+            let selected_tab_indicator = $(".carousel-item.active .selected_tab_indicator")
+            let active = $(".carousel-item.active .nav-link.active")
+            let top = selected_tab_indicator.offset().top
+            selected_tab_indicator.offset({top: top,left: active.offset().left})
+            selected_tab_indicator.width(active.outerWidth())
+        })
+        $("#carouselExampleControls").on("slide.bs.carousel", function(e) {
+            $(e.relatedTarget.getElementsByClassName("selected_tab_indicator")[0]).width(0)
+            
+        })
+    })
+</script>
