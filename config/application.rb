@@ -10,6 +10,7 @@ module ClanWeb
   class Application < Rails::Application
     # Initialize configuration defaults for originally generated Rails version.
     config.load_defaults 5.2
+    config.secret_key_base = ENV["SECRET_KEY_BASE"]
     config.assets.paths << Rails.root.join("app", "assets", "font", "roboto")
     config.assets.paths << Rails.root.join("app", "assets", "font")
     config.assets.paths << Rails.root.join("vendor", "assets", "img")
