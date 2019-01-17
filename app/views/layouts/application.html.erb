@@ -14,7 +14,7 @@
     <header>
       <nav class="navbar fixed-top navbar-expand-lg navbar-dark scrolling-navbar">
         <div class="container-fluid">
-          <% if signed_in? %>
+
             <a class="navbar-brand waves-effect waves-light"><strong class="blue-text col"><%= image_tag("logo.png", :class => "logo") %></strong></a><h1>Dark Arena Clan</h1>
           
 
@@ -36,19 +36,9 @@
                     <i class="fa fa-lg fa-telegram fa-blue" style="color: rgba(69, 105, 223, 0.699)"></i>
                   </a> 
                 </li>
-              </ul>
-              <div class="d-flex flex-row-reverse align-items-center">
-                <%= button_to 'Выйти', sign_out_path, method: :delete, :class=>"btn btn-info btn-rounded btn-lg waves-effect waves-light" %>
-                <a class="mr-4"><%= current_user.email %></a> 
-              </div>
-              
-              
-              
+              </ul>  
             </div>
-          <% else %>
-            <a class="navbar-brand waves-effect"><strong class="blue-text"><%= image_tag("logo.png", :class => "logo") %></strong></a>
-            
-          <% end %>
+
         </div>
       </nav>
     </header>
