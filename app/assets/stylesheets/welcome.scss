@@ -74,6 +74,10 @@ body {
     -moz-text-shadow:0px 1px 0 rgb(45, 71, 156),0px -1px 0 rgb(45, 71, 156),1px 0px 0 rgb(45, 71, 156),-1px 0px 0 rgb(45, 71, 156),1px 1px 0 rgb(45, 71, 156),1px -1px 0 rgb(45, 71, 156),-1px 1px 0 rgb(45, 71, 156),-1px -1px 0 rgb(45, 71, 156);
 }
 
+.modern {
+    font-family: 'Modern';
+}
+
 .navbar {
     background-color: $dark_theme-bg_color--lvl1;
     color: #df8634;
